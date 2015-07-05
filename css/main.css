@@ -1,0 +1,89 @@
+@import url(http://fonts.googleapis.com/css?family=Leckerli+One);
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::selection {
+    background: #F6F3E1;
+    text-shadow: none;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    position: absolute;
+    padding: 10px;
+    width: 100%;
+}
+
+/* ==========================================================================
+   Custom styles
+   ========================================================================== */
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+    height: 100%;
+    background: #fff url('/img/back.png') center center fixed;
+    font-family: 'Leckerli One', cursive;
+}
+
+body {
+    color: #000;
+    text-align: center;
+    padding-top:50px;
+}
+
+address {
+    font-size: 2em;
+}
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+        a[href]:after {
+            content: " (" attr(href) ")";
+        }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
